@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="grid h-screen grid-cols-2">
+    <main className="grid h-screen lg:grid-cols-2">
       {/* Left */}
-      <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/5 bg-[url(../assets/bg-stars.svg)] bg-cover px-28 py-16 ">
+      <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/5 bg-[url(../assets/bg-stars.svg)] bg-cover px-8 py-10 lg:px-28 lg:py-16 ">
         {/* Blur */}
-        <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 blur-full" />
+        <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-900 blur-full lg:bg-purple-700" />
 
         {/* Stripes */}
         <div className="absolute bottom-0 right-1 top-0 w-2 bg-stripes" />
@@ -34,10 +34,10 @@ export default function Home() {
           <Image src={logoImage} alt="NLW Spacetime" />
 
           <div className="max-w-[420px] space-y-1">
-            <h1 className="mt-5 text-5xl font-bold leading-tight text-gray-50">
+            <h1 className="mt-5 text-2xl font-bold leading-tight text-gray-50 lg:text-5xl">
               Sua cápsula do tempo
             </h1>
-            <p className="mt-1 text-lg leading-relaxed">
+            <p className=" mt-1 leading-relaxed lg:text-lg">
               Colecione momentos marcantes da sua jornada e compartilhe (se
               quiser) com o mundo!
             </p>
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       {/* Right */}
-      <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16 ">
+      <div className="hidden flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16 lg:flex ">
         <div className="flex flex-1 items-center justify-center">
           <p className="leading-relax w-[360px] text-center">
             Você ainda não registrou nenhuma lembrança, comece a{' '}
