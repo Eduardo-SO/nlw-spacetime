@@ -1,5 +1,6 @@
-import { CameraIcon, ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
+import { CameraIcon, ChevronLeft } from 'lucide-react'
+import { MediaPicker } from '@/components/MediaPicker'
 
 export default function NewMemory() {
   return (
@@ -14,14 +15,18 @@ export default function NewMemory() {
 
       <form className="flex flex-1 flex-col gap-2">
         <div className="flex items-center gap-4">
-          <label className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100">
-            <input type="file" className="hidden" />
+          <label
+            htmlFor="media"
+            className="flex cursor-pointer items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100"
+          >
             <CameraIcon className="h-4 w-4" />
             Anexar mídia
           </label>
 
           <label className="flex items-center gap-1.5 text-sm text-gray-200 hover:text-gray-100">
             <input
+              id="public-memory"
+              name="public-memory"
               type="checkbox"
               value="true"
               className="h-4 w-4 rounded border-gray-400 bg-gray-700 text-purple-500"
@@ -29,6 +34,8 @@ export default function NewMemory() {
             Tornar memória pública
           </label>
         </div>
+
+        <MediaPicker />
 
         <textarea
           name="content"
