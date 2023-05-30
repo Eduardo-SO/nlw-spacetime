@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <main className="grid h-screen lg:grid-cols-2">
           {/* Left */}
-          <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/5 bg-[url(../assets/bg-stars.svg)] bg-cover px-8 py-10 lg:px-28 lg:py-16 ">
+          <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/5 bg-[url(../assets/bg-stars.svg)] bg-cover px-8 py-10 lg:px-28 lg:py-16">
             <Blur />
             <Stripes />
 
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
 
           {/* Right */}
-          <div className="hidden flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16 lg:flex ">
+          <div className="flex-col overflow-y-auto bg-[url(../assets/bg-stars.svg)] bg-cover lg:flex ">
             {children}
           </div>
         </main>
